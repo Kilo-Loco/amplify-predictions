@@ -8,5 +8,7 @@ target 'amplify-predictions' do
   # Pods for amplify-predictions
   pod 'Amplify'
   pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
+  pod 'AWSPredictionsPlugin'
+  pod 'CoreMLPredictionsPlugin'
 
 end

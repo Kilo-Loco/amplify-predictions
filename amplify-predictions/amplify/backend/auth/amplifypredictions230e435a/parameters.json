@@ -1,6 +1,6 @@
 {
     "identityPoolName": "amplifypredictions230e435a_identitypool_230e435a",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "amplif230e435a",
     "userPoolName": "amplifypredictions230e435a_userpool_230e435a",
     "autoVerifiedAttributes": [

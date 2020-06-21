@@ -6,5 +6,13 @@
 			"dependsOn": [],
 			"customAuth": false
 		}
+	},
+	"predictions": {
+		"identifyTextd2cacec0": {
+			"providerPlugin": "awscloudformation",
+			"service": "Rekognition",
+			"dependsOn": [],
+			"identifyType": "identifyText"
+		}
 	}
 }

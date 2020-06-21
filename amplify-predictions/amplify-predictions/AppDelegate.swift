@@ -8,6 +8,7 @@
 
 import Amplify
 import AmplifyPlugins
+import AWSPredictionsPlugin
 import UIKit
 
 @UIApplicationMain
@@ -20,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             
             try Amplify.add(plugin: AWSCognitoAuthPlugin())
+            try Amplify.add(plugin: AWSPredictionsPlugin())
             try Amplify.configure()
             
         } catch {

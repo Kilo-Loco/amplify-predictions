@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchCurrentAuthSession()
+        
+        let imageUrl = URL(string: "https://3v6x691yvn532gp2411ezrib-wpengine.netdna-ssl.com/wp-content/uploads/2019/05/imagetext02.jpg")!
+        detectText(imageUrl)
     }
 
     func fetchCurrentAuthSession() {
@@ -25,6 +28,18 @@ class ViewController: UIViewController {
                 print("Fetch session failed with error \(error)")
             }
         }
+    }
+    
+    func detectText(_ image: URL) {
+        _ = Amplify.Predictions.identify(type: .detectText(.plain), image: image, options: PredictionsIdentifyRequest.Options(), listener: { (event) in
+            switch event {
+            case .success(let result):
+                print(result)
+                
+            case .failure(let error):
+                print(error)
+            }
+        })
     }
 
 }
